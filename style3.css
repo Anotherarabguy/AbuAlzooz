@@ -1,0 +1,158 @@
+/* Add this to your style3.css */
+/* Add this to your style3.css */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.portfolio-container iframe {
+    margin: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Add a glowing effect */
+}
+
+body {
+    background-image: url('back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #e3e3e3;
+    perspective: 1000px;
+    overflow: hidden;
+    transition: background-size 0.2s, transform 0.2s;
+    margin: 0; /* Reset the default margin */
+    padding: 0; /* Reset the default padding */
+}
+
+/* The rest of your CSS styles */
+
+
+/* Add this to your style3.css */
+/* Add this to your style3.css */
+#navbar {
+    background: #000;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 4px 0; /* Increase the padding for better click area */
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 20px; /* Adjust the margin to space out the links */
+    position: relative;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #e3e3e3;
+    font-weight: 600;
+    font-size: 1em; /* Increase the font size for a more prominent effect */
+    transition: color 0.5s;
+}
+
+#navbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #e3e3e3;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s; /* Make the effect faster */
+}
+
+#navbar a:hover {
+    color: #fff;
+}
+
+#navbar li:hover a::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Adjust the alpha (last value) to control darkness */
+    z-index: -1; /* Place it behind the content */
+    filter: brightness(0.6); /* Adjust the brightness value to make it darker */
+}
+
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.portfolio-container iframe {
+    margin: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Add a glowing effect */
+}
+
+.reflection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Place it behind the content */
+    filter: brightness(0.2); /* Adjust the brightness value to make it darker */
+    transform: scaleY(-1); /* Flip the reflection vertically */
+    opacity: 0.6; /* Adjust the opacity for a subtle reflection */
+}
+/* Add this to your style3.css */
+.portfolio-container iframe {
+    margin: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Initial glowing effect */
+    transform: scale(1); /* Initial size */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+}
+
+.portfolio-container iframe:hover {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7)); /* Adjust color and size as needed */
+    transform: scale(1.1); /* Add a scale effect on hover */
+}
+/* Add this to your style3.css */
+.portfolio-container iframe {
+    margin: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Initial glowing effect */
+    transform: scale(1); /* Initial size */
+    transition: filter 0.3s ease-in-out; /* Smooth transitions for filter */
+}
+
+.portfolio-container iframe:hover {
+    animation: equalizer 1s infinite alternate; /* Equalizer animation on hover */
+}
+
+@keyframes equalizer {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Initial state */
+        transform: scale(1); /* Initial size */
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7)); /* Adjust color and size as needed */
+        transform: scale(1.1); /* Adjust scale for the glow */
+    }
+}

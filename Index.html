@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Zaid Abueisa</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="banner" id="sec">
+        <header>
+            <div class="logo">
+                <a href="#"> <!-- Replace "index.html" with the actual URL of your homepage -->
+                    <img src="ZEISA.png" alt="Logo">
+                </a>
+            </div>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+    
+        <div class="content">
+            <h2>Hi There <br>I'm <span>Zaid Abueisa</span></h2>
+            <p>Visual art, New media Technology</p>
+            <a href="aboutme.html">Know more</a>
+        </div>
+    
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/stencil.graffiti" target="_blank"><img src="facebook.png"></a></li>
+            <li><a href="https://www.linkedin.com/in/zaid-abueisa-958b6920b/" target="_blank"><img src="Linkedin.png"></a></li>
+            <li><a href="https://www.instagram.com/abueisa01/" target="_blank"><img src="instagram.png"></a></li>
+        </ul>
+        
+    </section>
+    
+    <div id="navigation">
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li> <!-- Change the link to the current page -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById('sec');
+            var nav = document.getElementById('navigation');
+            sec.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
