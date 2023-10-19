@@ -15,37 +15,22 @@
 
 .logo1 {
     position: absolute;
-    top: 10px; /* Adjust the top value to position the logo under the navbar */
-    left: 10px; /* Adjust the left value to position the logo under the navbar */
+    top: 10px;
+    left: 10px;
 }
 
 .logo1 img {
-    max-width: 100px; /* Adjust the size of the logo as needed */
-}
-
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure full viewport height */
-    
-        padding-top: 60px; /* Adjust the value to move the content down */
-   
+    max-width: 100px;
 }
 
 
 
-body {
-    background-image: url('back.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #e3e3e3;
-    perspective: 1000px;
-    overflow: hidden;
-    transition: background-size 0.2s, transform 0.2s;
-    margin: 0; /* Reset the default margin */
-    padding: 0; /* Reset the default padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
 }
 
 
@@ -114,43 +99,8 @@ body::before {
 
 
 
-.reflection {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('back.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1; /* Place it behind the content */
-    filter: brightness(0.2); /* Adjust the brightness value to make it darker */
-    transform: scaleY(-1); /* Flip the reflection vertically */
-    opacity: 0.6; /* Adjust the opacity for a subtle reflection */
-}
-/* Add this to your style3.css */
-.portfolio-container iframe {
-    margin: 50px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Initial glowing effect */
-    transform: scale(1); /* Initial size */
-    transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
-}
 
-.portfolio-container iframe:hover {
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7)); /* Adjust color and size as needed */
-    transform: scale(1.1); /* Add a scale effect on hover */
-}
-/* Add this to your style3.css */
-.portfolio-container iframe {
-    margin: 50px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Initial glowing effect */
-    transform: scale(1); /* Initial size */
-    transition: filter 0.3s ease-in-out; /* Smooth transitions for filter */
-}
 
-.portfolio-container iframe:hover {
-    animation: equalizer 1s infinite alternate; /* Equalizer animation on hover */
-}
 
 @keyframes equalizer {
     0% {
@@ -162,17 +112,7 @@ body::before {
         transform: scale(1.1); /* Adjust scale for the glow */
     }
 }
-body {
-    background-image: url('back.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #e3e3e3;
-    perspective: 1000px;
-    overflow: auto; /* Set overflow to auto to make the page scrollable */
-    transition: background-size 0.2s, transform 0.2s;
-    margin: 0; /* Reset the default margin */
-    padding: 0; /* Reset the default padding */
-}
+
 /* Your existing styles here */
 
 /* Your existing styles here */
@@ -188,6 +128,20 @@ body {
     margin: 0; /* Reset the default margin */
     padding: 0; /* Reset the default padding */
 }
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.particles {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Additional styling can be added to your page content if needed */
+
 
 /* The rest of your CSS styles */
 
@@ -268,4 +222,101 @@ body {
 #navbar .dropdown:hover .dropdown-menu,
 #navbar .dropdown:focus .dropdown-menu {
     display: block;
+}
+
+/* Your existing CSS styles go here */
+
+
+
+.centered-h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #e3e3e3; /* Adjust the color as needed */
+    margin-top: 100px;
+}
+
+.artwork-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.artwork-box {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+    background: #f5f5f5; /* Adjust the background color */
+    border-radius: 10px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+}
+
+.artwork-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #999;
+    border-radius: 8px;
+
+}
+
+.artwork-box p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333; /* Adjust the text color */
+}
+.artwork-box:hover {
+    transform: scale(1.05); /* Enlarge the box on hover */
+    border-color: #0077b6; /* Change the border color on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect on hover */
+    background-color: #e3e3e3; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+}
+
+.cyber-box {
+    background: rgba(0, 0, 0, 0.8);
+    color: #e3e3e3;
+    border: 2px solid #424242;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-box::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e3e3e3;
+    opacity: 0.6;
+    animation: moveX 3s ease-in-out infinite;
+}
+
+.cyber-box::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e3e3e3;
+    opacity: 0.6;
+    animation: moveY 2s ease-in-out infinite;
+}
+
+/* Keyframes for animation */
+@keyframes moveX {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveY {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
 }

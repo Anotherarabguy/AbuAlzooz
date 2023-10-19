@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Armata&family=Dosis:wght@200&family=Open+Sans:ital,wght@0,400;0,500;1,400&family=Tilt+Neon&display=swap');
+@font-face {
+    font-family: 'CustomFont';
+    src: url('NixieOne.ttf') format('truetype');
+  }
+  body {
+    font-family: 'CustomFont', sans-serif;
+  } 
 
 *
 
@@ -7,7 +13,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Dosis', sans-serif;
+
 }
 
 
@@ -24,7 +30,7 @@ header {
 }
 
 header .logo {
-    position: relative;
+    position: fixed; /* Make the logo fixed */
     font-weight: 700;
     color: #424242;
     font-size: 2em;
@@ -32,44 +38,50 @@ header .logo {
     letter-spacing: 2px;
     transition: 0.6s;
     margin-top: 20px; /* Adjust the margin-top to center the logo vertically */
+    left: 0; /* Add this line to make it stick to the left edge */
+    top: 0; /* Add this line to make it stick to the top edge */
 }
 
 header .logo img {
     max-width: 100px; /* Adjust the size of the logo as needed */
     margin-right: 10px; /* Add some spacing between the logo and text */
+    
 }
 
-.about-me-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 100px;
+    z-index: 3;
+}
+
+.content {
+    max-width: 40%; /* Adjust the width as needed */
     padding: 20px;
-    color: #e3e3e3;
-    margin-top: 80px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-  
+/* The rest of your CSS remains unchanged */
 
-
-
-
-
-.content
-{
-    max-width: 600px;
-
+/* Optionally, you can add a box around the content */
+.content-box {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 20px;
+    width: 20%; /* Adjust the width as needed */
 }
 .content h2
 {
     color: #fff;
-    font-size: 2.5em;
+    font-size: 1em;
 
 }
 .content h2 span 
 {
     color:#424242;
-    font-size: 1.2em;
+    font-size: 1em;
 
 }
 
@@ -136,11 +148,11 @@ header .logo img {
     mix-blend-mode:normal;
 
 }
-@media (max-width: 767px)
+@media (max-width: 768px)
 {}
 
 body {
-    background-image: url('Zaidone.jpeg');
+    
     background-size: cover;
     background-repeat: no-repeat;
     color: #e3e3e3;
@@ -163,7 +175,7 @@ body {
 
 .wrapper {
     height: 100vh;
-    overflow: hidden; /* Add this line to remove the scroll bar */
+    overflow: auto; /* Add this line to make the page scrollable when content overflows */
     position: relative;
 }
 
@@ -171,15 +183,16 @@ body {
 .about-me-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    padding: 1px;
     color: #e3e3e3;
-     margin-top: 80px;
+    margin-top: 20px; /* Adjust the top margin as needed */
 }
 
+
 .scroll-text {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 20px;
     text-align: center;
 }
@@ -197,28 +210,28 @@ body {
 }
 
 
-
+.left-image {
+    float: left; /* Float the image to the right */
+    max-width: 40%; /* Adjust the image width as needed */
+    margin-left: 100px; /* Add some spacing between the image and text */
+    margin-top: 150px;
+}
 
 
 .scroll-paragraph {
-    text-align: center;
     font-size: 1em;
     margin: 0px 0;
-    padding: 2px;   
-    
+    padding: 0px;
+    max-width: 60%; /* Adjust the width as needed */
+    text-align: center; /* Center the text horizontally */
+    justify-content: center;
+    margin-top: 20px; /* Add space between the "About Me" and the paragraph */
 }
 
 
 
 
 
-header img {
-    position: absolute;
-    top: 70px;
-    left: 900px;
-    max-width: 100px;
-    z-index: 3;
-}
 
 
 
@@ -273,5 +286,81 @@ header img {
 #navbar li:hover a::after {
     transform: scaleX(1); /* Expand the line on hover */
     transform-origin: left;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -6px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0rem;
+    color: #e3e3e3;
+    outline: none;
+    text-align: center;
+    font-weight: 100;
+    border: none; /* Remove the border */
+}
+
+  
+  h1:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: #e3e3e3;
+    letter-spacing: .5px;
+  }
+  
+
+  /* Style for the dropdown menu */
+#navbar .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #202020;
+    width: 160px;
+    padding: 10px;
+    z-index: 200;
+    border-radius: 4px;
+    top: 100%; /* Position the dropdown below the "Exhibition" item */
+    left: 0;
+}
+
+/* Style for the dropdown menu items */
+#navbar .dropdown .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar .dropdown .dropdown-menu li {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+}
+
+
+/* Show the dropdown menu when hovering over or clicking the "Exhibition" item */
+#navbar .dropdown:hover .dropdown-menu,
+#navbar .dropdown:focus .dropdown-menu {
+    display: block;
+}
+/* Scrollbar styles... */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #424242; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Adjust the border-radius to make it rounder */
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #424242 transparent;
 }
 

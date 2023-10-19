@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style4.css">
     <title>Contact</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
-    
-    <div id="background-effect"></div>
-    <div id="side-effect"></div>
     <div id="navbar" class="responsive">
         <ul>
             <li><a href="Index.html">Home</a></li>
+            
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Exhibition</a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="xtunisia.html">Exhibition in Tunisia</a></li>
+                        <li><a href="xuk.html">Exhibition in UK</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="aboutme.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li> <!-- Change the link to the current page -->
             <li><a href="contact.html">Contact</a></li>
-
         </ul>
     </div>
     <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p>Feel free to get in touch with us!</p>
+        <div class="logo">
+            <img src="Logo1.png" alt="Your Logo">
+        </div>
+        <h1>Contact me</h1>
+        <p>Feel free to get in touch with me!</p>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
+            <label for "message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </div>
-    
-    </body>
+    <script src="script.js"></script>
+</body>
+</html>

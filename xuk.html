@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="xuk.css">
+    <style>
+        /* Add your custom styles here */
+        .fullscreen-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .fullscreen-img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar" class="responsive">
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+           
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Exhibition</a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="xtunisia.html">Exhibition in Tunisia</a></li>
+                        <li><a href="xuk.html">Exhibition in UK</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <a href="index.html">
+        <div class="logo1">
+            <img src="Logo1.png" alt="Logo">
+        </div>
+    </a>
+    
+    <header>
+        <a href="Index.html">
+            <div class="navbar-toggle" id="toggle">
+                <div class="navbar-toggle-bar"></div>
+            </div>
+        </a>
+        <div class="reflection"></div>
+    </header>
+    
+    <div class="centered-container">
+        <h1 class="centered-h1">Tunisia Exhibition</h1>
+        
+        <div class="artwork-showcase">
+            <div class="artwork-box">
+                <img src="artwork1.jpg" alt="Artwork 1" onclick="showFullscreen('artwork1.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork2.jpg" alt="Artwork 2" onclick="showFullscreen('artwork2.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+            <div class="artwork-box">
+                <img src="artwork3.jpg" alt="Artwork 3" onclick="showFullscreen('artwork3.jpg')">
+            </div>
+           
+
+            <!-- Add more artwork boxes as needed -->
+        </div>
+    </div>
+    <div class="cyber-box">
+        <p>As an artist, my journey to the art exhibition in Tunisia was a truly enriching and inspirational experience. The moment I stepped into the exhibition hall, I was immediately struck by the vibrant and diverse art scene that Tunisia had to offer. The colors, shapes, and stories told through the artwork were a testament to the rich cultural tapestry of the country. I found myself drawn to the local artists' use of traditional techniques blended seamlessly with contemporary themes, creating a unique fusion of the old and the new.
+
+            One of the most striking aspects of the exhibition was the sense of cultural pride that radiated from the pieces on display. Tunisian artists expressed their identity and history through their work, giving the viewers an opportunity to connect with the country's heritage on a profound level. The exhibition allowed me to engage with the local art community, sharing ideas, and perspectives with fellow artists and art enthusiasts. The exchange of experiences and creative energy was invaluable, leaving me inspired to explore new techniques and approaches to my own art.
+            
+            Overall, the trip to the art exhibition in Tunisia was not only a visual feast for the senses but also a cultural and artistic awakening. It rekindled my passion for art and encouraged me to continue pushing the boundaries of my creativity, drawing from the rich tapestry of experiences I encountered in this fascinating North African nation.</p>
+    </div>
+    
+    <div class="fullscreen-image" onclick="closeFullscreen()">
+        <img class="fullscreen-img" src="" alt="Fullscreen Image">
+    </div>
+    
+    <script>
+        function showFullscreen(imageSrc) {
+            const fullscreenImage = document.querySelector('.fullscreen-img');
+            const fullscreenContainer = document.querySelector('.fullscreen-image');
+            fullscreenImage.src = imageSrc;
+            fullscreenContainer.style.display = 'flex';
+        }
+        
+        function closeFullscreen() {
+            const fullscreenContainer = document.querySelector('.fullscreen-image');
+            fullscreenContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

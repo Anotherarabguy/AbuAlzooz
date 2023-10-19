@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="style3.css">
 </head>
-
 <body>
+    <div id="navbar" class="responsive">
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Exhibition</a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="xtunisia.html">Exhibition in Tunisia</a></li>
+                        <li><a href="xuk.html">Exhibition in UK</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <a href="index.html"> <!-- Wrap the logo in an anchor tag with the desired href -->
+        <div class="logo1">
+            <img src="Logo1.png" alt="Logo">
+        </div>
+    </a>
     <header>
-        
+        <a href="Index.html">
             <div class="navbar-toggle" id="toggle">
                 <div class="navbar-toggle-bar"></div>
             </div>
-        </nav>
+        </a>
         <div class="reflection"></div>
     </header>
     <div class="wrapper">
@@ -23,14 +50,10 @@
             <iframe src="https://www.behance.net/embed/project/169249279?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
             <iframe src="https://www.behance.net/embed/project/169220583?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-    </div>
-    <div id="navbar" class="responsive">
-        <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li> <!-- Change the link to the current page -->
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+        </div>
+
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

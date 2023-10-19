@@ -8,7 +8,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+
 </head>
 
 <body>
@@ -17,42 +22,84 @@
         <header>
             <div class="logo">
                 <a href="#"> <!-- Replace "index.html" with the actual URL of your homepage -->
-                    <img src="ZEISA.png" alt="Logo">
+                    <img src="logo1.png" alt="Logo">
                 </a>
             </div>
             <div id="toggle" onclick="toggle()"></div>
         </header>
     
         <div class="content">
-            <h2>Hi There <br>I'm <span>Zaid Abueisa</span></h2>
+            <h2>Hi There <br>I'm <span class="cut-text">Zaid Abueisa</span></h2>
             <p>Visual art, New media Technology</p>
-            <a href="aboutme.html">Know more</a>
+            <a href="aboutme.html" class="button">Know more</a> <!-- Added the button class -->
         </div>
     
         <ul class="sci">
-            <li><a href="https://www.facebook.com/stencil.graffiti" target="_blank"><img src="facebook.png"></a></li>
-            <li><a href="https://www.linkedin.com/in/zaid-abueisa-958b6920b/" target="_blank"><img src="Linkedin.png"></a></li>
-            <li><a href="https://www.instagram.com/abueisa01/" target="_blank"><img src="instagram.png"></a></li>
+            <li><a href="https://www.facebook.com/stencil.graffiti" target="_blank"><img src="facebook1.png"></a></li>
+            <li><a href="https://www.linkedin.com/in/zaid-abueisa-958b6920b/" target="_blank"><img src="Linkedin1.png"></a></li>
+            <li><a href="https://www.instagram.com/abueisa01/" target="_blank"><img src="instagram1.png"></a></li>
         </ul>
         
     </section>
     
-    <div id="navigation">
-        <ul>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li> <!-- Change the link to the current page -->
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+    <body>
+        <div id="navigation">
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li class="dropdown" id="exhibitions-dropdown">
+                    <a href="#">Exhibitions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="xtunisia.html">Tunisia Exhibition</a></li>
+                        <li><a href="xuk.html">UK Exhibition</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a class="contact-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
     
-    <script type="text/javascript">
-        function toggle(){
-            var sec = document.getElementById('sec');
-            var nav = document.getElementById('navigation');
-            sec.classList.toggle('active');
-            nav.classList.toggle('active');
+    
+   
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+    
+        <script type="text/javascript">
+            function toggle() {
+                var sec = document.getElementById('sec');
+                var nav = document.getElementById('navigation');
+                sec.classList.toggle('active');
+                nav.classList.toggle('active');
+            }
+            $(document).ready(function() {
+    $('#exhibitions-dropdown').on('click', function(e) {
+        e.stopPropagation();
+        $('.dropdown-menu').slideToggle('fast');
+    });
+
+    // Close the dropdown when clicking outside
+    $(document).on('click', function(e) {
+        if (!$('#exhibitions-dropdown').is(e.target) && $('#exhibitions-dropdown').has(e.target).length === 0) {
+            $('.dropdown-menu').slideUp('fast');
         }
-    </script>
+    });
+});
+
+$(document).ready(function () {
+    $(".dropdown").click(function () {
+        $(this).find(".dropdown-menu").toggleClass("active");
+        $(".contact-link").toggleClass("pushed-down");
+    });
+});
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
