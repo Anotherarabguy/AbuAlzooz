@@ -174,7 +174,7 @@ body {
 }
 
 .wrapper {
-    height: 100vh;
+    height: 90vh;
     overflow: auto; /* Add this line to make the page scrollable when content overflows */
     position: relative;
 }
@@ -183,11 +183,12 @@ body {
 .about-me-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
+    justify-content: center;
+    align-items: center;
     padding: 1px;
     color: #e3e3e3;
     margin-top: 20px; /* Adjust the top margin as needed */
+    min-height: 100vh; /* Set a minimum height to ensure full scrollability */
 }
 
 
@@ -212,21 +213,22 @@ body {
 
 .left-image {
     float: left; /* Float the image to the right */
-    max-width: 40%; /* Adjust the image width as needed */
-    margin-left: 100px; /* Add some spacing between the image and text */
+    max-width: 35%; /* Adjust the image width as needed */
+    margin-left: 150px; /* Add some spacing between the image and text */
     margin-top: 150px;
 }
 
 
 .scroll-paragraph {
-    font-size: 1em;
-    margin: 0px 0;
+    font-size: 0.9em;
+    margin: 10px 0; /* Increase the margin between paragraphs */
     padding: 0px;
-    max-width: 60%; /* Adjust the width as needed */
-    text-align: center; /* Center the text horizontally */
+    max-width: 50%;
+    text-align: center;
     justify-content: center;
-    margin-top: 20px; /* Add space between the "About Me" and the paragraph */
+    margin-top: 10px;
 }
+
 
 
 
