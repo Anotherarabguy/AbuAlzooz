@@ -46,8 +46,8 @@ margin: -20px;
 
 
 header .logo img {
-    max-width: 100px; /* Adjust the size of the logo as needed */
-    margin-right: 10px; /* Add some spacing between the logo and text */
+    max-width: 100px; 
+    margin-right: 10px; 
 }
 
 
@@ -128,25 +128,24 @@ header #toggle:after
      transform: translateX(-400px);
 }
 
-#navigation 
-{
+#navigation {
+    background-color: rgba(227, 227, 227, 0.0); /* Transparent background with 0.8 opacity */
+    color: #e3e3e3;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     right: -200px;
     width: 400px;
     height: 100vh;
-    background: #e3e3e3;
     z-index: 1;
     display: grid;
     place-items: center;
     transition: 0.5s;
-
-
 }
-#navigation.active 
-{
+#navigation.active {
     right: 0;
 }
+
 
 #navigation ul
 {
@@ -161,13 +160,13 @@ header #toggle:after
 #navigation ul li.dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    background: #e3e3e3;
+    background: #202020;
     right: 0;
     top: 100%;
-    width: 100%; /* Adjust the width as needed */
-    z-index: 1; /* Ensure it's above other elements */
-    border: none; /* Remove the border */
-    border-radius: 0; /* Remove the border-radius */
+    width: 100%; 
+    z-index: 1; 
+    border: none; 
+    border-radius: 0; 
 }
 
 #navigation ul li.dropdown .dropdown-menu.active {
@@ -180,7 +179,7 @@ header #toggle:after
 }
 #navigation ul li a
 {
-    color:#424242;
+    color:#beb4b4;
     text-decoration: none;
     display: inline-block;
     font-size: 2.5em;
@@ -244,8 +243,8 @@ header #toggle:after
     position: relative;
     display: grid;
     place-items: center;
-    width: 50px; /* Adjust the size as needed */
-    height: 50px; /* Adjust the size as needed */
+    width: 50px; 
+    height: 50px; 
     text-decoration: none;
     margin: 10px 0 0;
     transition: box-shadow 0.6s ease-in-out;
@@ -253,7 +252,7 @@ header #toggle:after
 }
 
 .sci li a:hover {
-    box-shadow: 0 0 10px 2px #e3e3e3; /* Adding a box shadow on hover for the glowing effect */
+    box-shadow: 0 0 10px 2px #e3e3e3; 
 }
 
 .sci li a img {
@@ -364,6 +363,7 @@ body {
     }
 }
 
+
 .scroll-paragraph:hover {
     box-shadow: 0 0 15px rgba(66, 66, 66, 0.8);
     transition: box-shadow 0.3s ease-in-out;
@@ -421,18 +421,41 @@ header img {
     font-size: 1.2em;
     font-weight: 500;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button .original-text {
+    position: relative;
+    z-index: 2;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.button:hover .original-text {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .button:hover {
-    background-color: #005f8d;
-    transform: scale(1.05); /* Adds a slight zoom-in effect on hover */
+    background-color: #424242;
+    transform: scale(1.05);
 }
 
 .button:active {
-    background-color: #00476c; /* Change the color when the button is clicked */
+    background-color: #00476c;
 }
+
+/* Your existing styles here... */
+
 
 /* If you're using this button within a specific container, you can prefix the class with that container's class or ID to make it more specific, e.g., .container .button */
 
